@@ -45,3 +45,83 @@
     flex-direction: column-reverse;
   }
 }
+/* 
+스타일 초기화 
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 1rem;
+}
+
+ul {
+  list-style: "";
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+지역 변수 
+.avartar {
+  --silver: #dbdbdb;
+  --green: #4cfe88;
+  --size: 64px;
+  --gap: 20px;
+
+  --offline: var(--silver, #dbdbdb);
+  --online: var(--green, #4cfe88);
+
+  inline-size: var(--size);
+  block-size: var(--size);
+
+  img {
+    max-inline-size: 100%;
+    block-size: auto;
+    border-radius: 50%;
+  }
+
+  figcaption {
+    --size: 20px;
+
+    inline-size: var(--size);
+    block-size: var(--size);
+    border-radius: 50%;
+    position: absolute;
+    inset-inline-end: 0;
+    inset-block-end: 0;
+    border: 2px solid #fff;
+  }
+
+  &.is-online figcaption {
+    background-color: var(--online);
+  }
+
+  &.is-offline figcaption {
+    background-color: var(--offline);
+  }
+}
+
+레이아웃 
+.avartars {
+  border: 1px solid #aaa;
+  padding: 50px;
+
+  ul {
+    display: flow-root;
+    inline-size: 356px;
+  }
+
+  li {
+    float: inline-start;
+    margin: 10px;
+  }
+} */
