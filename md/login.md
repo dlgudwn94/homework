@@ -1,5 +1,7 @@
 # 3차 과제 Login 코드 설명
 
+## [Login](https://dlgudwn94.github.io/homework/login/login.html)
+
 ## HTML 구조 설명
 
 ```
@@ -37,6 +39,7 @@ login-page라는 하나의 섹션으로 구성함
 ```
 
 아이디와 비밀번호 등 input, button 요소를 제공하기 위해 form 태그를 사용하여 아이디, 비밀번호, 로그인 버튼을 배치함  
+보안을 위해 form의 method는 post로 설정함  
 타입을 각각 지정하고 아이디와 비밀번호 input 태그에 required를 넣어 필수 입력 서식으로 구현함  
 유효하지 않은 값을 입력할 시 나타나게 할 안내 문구는 span 태그를 사용하여 각각 class를 부여함
 
