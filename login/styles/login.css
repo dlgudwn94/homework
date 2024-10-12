@@ -1,1 +1,149 @@
-/* CSS를 활용하여 레이아웃 및 스타일링을 완성해주세요 */
+@import "./../../../html-css/src/common/best-reset.css";
+@import "./../../../html-css/src/common/a11y.css";
+
+:root {
+  --default-font-size: 16px;
+  --default-font-color: #121212;
+  --default-color: #fff;
+  --green-color: #03cf5d;
+  --focus-color: #e9f0fd;
+  --focus-custom-color: #24388d;
+}
+
+.login-page {
+  width: 100%;
+  inline-size: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-inline: 1.25rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  font-size: var(--default-font-size);
+  color: var(--default-font-color);
+  margin: 0 auto;
+
+  @media (min-width: 768px) {
+    width: 500px;
+    inline-size: 500px;
+  }
+
+  .naver-logo {
+    width: 230px;
+    inline-size: 230px;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    margin-block: 5rem;
+  }
+
+  .login-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    input[id="user-id"],
+    input[id="user-pwd"] {
+      width: 100%;
+      inline-size: 100%;
+      font-size: 0.875rem;
+      height: 2.8125rem;
+      block-size: 2.8125rem;
+      padding-left: 1.25rem;
+      padding-right: 1.25rem;
+      padding-inline: 1.25rem;
+      margin-top: 1rem;
+      border: #dadada solid 1px;
+      background-color: var(--default-color);
+
+      &:focus {
+        border: var(--green-color) solid 1px;
+        background-color: var(--focus-color);
+        outline: none;
+      }
+    }
+
+    .err-user-id,
+    .err-user-pwd {
+      width: 100%;
+      display: none;
+      color: red;
+      font-size: 0.625rem;
+      padding-inline-start: 0.625rem;
+      margin-top: 0.3125rem;
+    }
+    input[type="email"]:user-invalid + .err-user-id {
+      display: inline;
+    }
+
+    input[type="password"]:user-invalid + .err-user-pwd {
+      display: inline;
+    }
+
+    button[type="submit"] {
+      width: 100%;
+      height: 2.8125rem;
+      block-size: 2.8125rem;
+      color: var(--default-color);
+      background-color: var(--green-color);
+      border: none;
+      margin-top: 1.25rem;
+      margin-block-start: 1.25rem;
+
+      &:focus {
+        outline-color: var(--focus-custom-color);
+      }
+    }
+
+    .stay-login {
+      width: 100%;
+      display: flex;
+      margin-top: 0.625rem;
+      justify-content: end;
+
+      @media (min-width: 768px) {
+        justify-content: space-between;
+      }
+    }
+    input[type="checkbox"] {
+      display: none;
+    }
+
+    input[type="checkbox"] + label {
+      text-align: center;
+      cursor: pointer;
+      margin-right: 0.3125rem;
+      margin-inline-end: 0.3125rem;
+    }
+
+    input[type="checkbox"] + label::before {
+      content: "";
+      display: inline-block;
+      background: url(../../assets/login/unchecked.svg) no-repeat;
+      width: 1.5rem;
+      height: 1.5rem;
+
+      &:foucs {
+        outline-color: var(--focus-custom-color);
+      }
+    }
+
+    input[type="checkbox"]:checked + label::before {
+      background: url(../../assets/login/checked.svg) no-repeat;
+      &:focus {
+        outline-color: var(--focus-custom-color);
+      }
+    }
+
+    .ip-security {
+      display: none;
+      font-size: var(--default-font-size);
+      color: var(--default-font-color);
+
+      @media (min-width: 768px) {
+        display: inline-block;
+      }
+    }
+  }
+}
